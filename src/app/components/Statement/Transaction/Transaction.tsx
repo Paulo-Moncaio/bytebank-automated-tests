@@ -1,10 +1,7 @@
+import { TTransaction } from '@/types/Transaction'
+
 export type TransactionProps = {
-  transaction: {
-    type: string
-    month: string
-    date: string
-    amount: number
-  }
+  transaction: TTransaction
 }
 
 export default function Transaction({ transaction }: TransactionProps) {
