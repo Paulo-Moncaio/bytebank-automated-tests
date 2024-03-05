@@ -21,7 +21,7 @@ export default function Transaction({ transaction }: TransactionProps) {
       </div>
       <h3
         data-testid="valorTransacao"
-        className=""
+        className="text-base font-bold text-black"
       >{`${amountPrefix}  ${transaction.amount}`}</h3>
       <div className="mx-auto my-3 h-[1px] w-full bg-[##47a13880]" />
     </li>
