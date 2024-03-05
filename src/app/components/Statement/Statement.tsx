@@ -1,12 +1,8 @@
+import { TTransaction } from '@/types/Transaction'
 import Transaction from './Transaction/Transaction'
 
 type StatementProps = {
-  transactions: {
-    type: string
-    month: string
-    date: string
-    amount: number
-  }[]
+  transactions: TTransaction[]
 }
 
 export default function Statement({ transactions }: StatementProps) {
