@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import Ilustracao from './ilustracao.svg'
+import TopImage from './detalhe-sup.svg'
+import BottomImage from './detalhe-inf.svg'
 import Balance from './Balance/Balance'
 
 const date = Date.now()
@@ -21,6 +23,12 @@ type MainProps = {
 export default function Main({ balance }: MainProps) {
   return (
     <section className="relative flex h-1/2 w-[690px] flex-col justify-between rounded-lg bg-[#47a138] p-6 shadow-lg">
+      {/* Adicionar image detalhe superior */}
+      <Image
+        className="absolute right-0 top-0"
+        src={TopImage}
+        alt={'Top background image'}
+      />
       <div className="absolute right-0 top-0 size-48 bg-cover bg-no-repeat" />
       <h1 className="text-2xl font-medium text-gray-100">{'Olá, Joana :)!'}</h1>
       <p className="mb-6 mt-4 text-gray-100">{`${
@@ -34,6 +42,12 @@ export default function Main({ balance }: MainProps) {
         />
         <Balance balance={balance} />
       </div>
+      <Image
+        className="absolute bottom-0 left-0"
+        src={BottomImage}
+        alt={'Bottom background image'}
+      />
+      {/* Adicionar a imagem detalhe inferior */}
       <div className="absolute bottom-0 left-0 size-48 bg-cover bg-no-repeat" />
     </section>
   )
