@@ -13,7 +13,7 @@ export default function Menu() {
           <div key={index} className="text-center">
             <a
               href="/"
-              className="cursor-pointer font-semibold text-[#111111] no-underline hover:font-semibold hover:text-black"
+              className="cursor-pointer text-[#111111] no-underline hover:font-semibold hover:text-black"
             >
               {item}
             </a>
