@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from 'react'
 import { calculateNewBalance } from '@/utils/calculateNewBalance'
 import { Header } from './components'
