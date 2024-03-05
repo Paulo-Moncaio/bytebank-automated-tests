@@ -1,31 +1,22 @@
 'use client'
-import React, { useState } from 'react'
-import { calculateNewBalance } from '@/utils/calculateNewBalance'
-import { Header } from './components'
-
-type Transacao = { transacao: string; valor: string }
+import { useState } from 'react'
+import { Header, Menu, Statement } from './components'
+import { TTransaction } from '@/types/Transaction'
 
 export default function Home() {
-  const [saldo, setSaldo] = useState(1000)
-  const [transacoes, setTransacoes] = useState<Transacao[]>([])
-
-  function handleTransaction(valores: Transacao) {
-    const novoSaldo = calculateNewBalance(valores, saldo)
-    setSaldo(novoSaldo)
-    setTransacoes([...transacoes, valores])
-  }
+  const [transactions, setTransactions] = useState<TTransaction[]>([])
 
   return (
     <>
       <Header />
-      {/* <main className={estilos.container}>
+      <main className="mx-auto my-0 mt-4 flex h-[86vh] w-[1199px] justify-between">
         <Menu />
-        <div className={estilos.wrapper}>
+        {/* <div className={estilos.wrapper}>
           <Principal saldo={saldo} />
           <Transacao realizarTransacao={realizarTransacao} />
-        </div>
-        <Extrato transacoes={transacoes} />
-      </main> */}
+        </div> */}
+        <Statement transactions={transactions} />
+      </main>
     </>
   )
 }
