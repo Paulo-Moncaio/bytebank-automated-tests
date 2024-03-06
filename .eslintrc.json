@@ -3,5 +3,6 @@
     "@rocketseat/eslint-config/next",
     "next/core-web-vitals",
     "plugin:tailwindcss/recommended"
-  ]
+  ],
+  "plugins": ["jest"]
 }
