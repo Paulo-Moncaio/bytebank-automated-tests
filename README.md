@@ -27,6 +27,7 @@ npm run dev
 ## what I've learned
 - How to configure jest in a nextjs, tailwind, typescript project
 - Test react components with react testing library and snapshots tests
+- Simulate user interaction with userEvent from testing-library
 
 ## technologies ⚙️
 - [Nextjs](https://nextjs.org) | [Typescript](https://www.typescriptlang.org)
